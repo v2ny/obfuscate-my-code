@@ -1,0 +1,26 @@
+{
+  "name": "obfuscate-my-code",
+  "version": "1.0.2",
+  "description": "You can use this to obfuscate (AND, OR) minify your project files so it can't be easily stolen or to make it very hard to read.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": { 
+    "compile": "tsc",
+    "clean": "rm -rf dist",
+    "prebuildpackage": "npm run clean && npm run compile && node dist/SetupPackage.js && npm publish dist/",
+    "buildpackage": "cd dist && npm pack"
+  },
+  "keywords": ["Typescript", "Javascript", "encode", "minify", "obfuscate", "obfuscator", "minified", "minifier", "project", "encoding", "hash", "hashing"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@minify-html/node": "^0.10.7",
+    "@types/javascript-obfuscator": "^0.17.0",
+    "@types/node": "^18.11.18",
+    "fs": "0.0.1-security",
+    "javascript-obfuscator": "^4.0.0",
+    "path": "^0.12.7",
+    "uglify-js": "^3.17.4",
+    "uglify-js-minify-css-allfiles": "^1.2.9"
+  }
+}

@@ -1,0 +1,1 @@
+export { OBFMC } from './obfuscateorminify';
